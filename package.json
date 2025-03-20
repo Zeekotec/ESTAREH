@@ -1,0 +1,18 @@
+{
+  "name": "stocker-1.0.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "watch-sass": "sass --watch scss/bootstrap.scss:css/bootstrap.min.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}
