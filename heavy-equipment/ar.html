@@ -7,9 +7,7 @@
     <title>المعدات الثقيلة | استريح</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
@@ -28,109 +26,109 @@
     <link href="./../css/style.css" rel="stylesheet">
     <link rel="icon" href="../img/logo.png" type="image/png">
     <style>
-        h2,
-        p {
-            color: #0b1a55;
+        .Zcontainer {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 0;
         }
-        .animated-cards .card {
-            transition: transform 0.3s ease-in-out;
+        
+        .Zcard {
+            position: relative;
+            width: 250px;
+            height: 350px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+            margin: 10px;
+            /* إضافة هامش لتجنب تداخل العناصر */
         }
-
-        .animated-cards .card:hover {
+        
+        .Zcard:hover {
             transform: scale(1.05);
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
         }
-
-        .scrolling-reviews {
-            overflow-x: auto;
-            white-space: nowrap;
+        
+        .Zcard img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s;
         }
-
-        .scrolling-reviews .card {
-            display: inline-block;
-            margin-right: 15px;
-            width: 300px;
-        }
-        .object-fit-cover {
-        object-fit: cover;
-    }
-
-    .overlay {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
-    }
-
-    .content-container {
-        max-width: 600px;
-    }
-
-    @media (max-width: 768px) {
-        .content-container {
+        
+        .Zoverlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 2rem;
+            opacity: 0;
+            transition: 0.5s;
+            padding: 15px;
         }
-        .text-white h1 {
-            font-size: 2rem;
+        
+        .Zcard:hover .Zoverlay {
+            opacity: 1;
         }
-    }
-    .hexagon {
-        width: 190px;
-        height: 144px;
-        background-color: #ccc;
-        margin: 10px;
-        position: relative;
-        clip-path: polygon(
-            25% 0%, 75% 0%, 
-            100% 50%, 75% 100%, 
-            25% 100%, 0% 50%
-        );
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: transform 0.3s;
-    }
-
-    .hexagon:hover {
-        transform: scale(1.1);
-    }
-
-    .hex-content {
-        text-align: center;
-        color: white;
-    }
-
-    .hex-content h3 {
-        margin: 0;
-        font-size: 24px;
-    }
-
-    .hex-content p {
-        margin: 0;
-        font-size: 14px;
-    }
-
-    @media (max-width: 768px) {
-        .hexagon {
-            width: 100px;
-            height: 86px;
-        }
-
-        .hex-content h3 {
+        
+        .Zoverlay h3 {
+            color: #fff;
             font-size: 20px;
+            margin-bottom: 10px;
         }
-
-        .hex-content p {
-            font-size: 12px;
+        
+        .Zoverlay p {
+            color: #ddd;
+            font-size: 14px;
         }
-    }
+        /* تعديل التنسيق باستخدام media query للهواتف */
+        
+        @media (max-width: 767px) {
+            .Zcontainer {
+                padding: 20px 0;
+                gap: 15px;
+            }
+            .Zcard {
+                width: 180px;
+                /* تصغير عرض الحاويات لتناسب الهاتف */
+                height: 250px;
+                /* تصغير الارتفاع أيضا */
+            }
+            .Zoverlay h3 {
+                font-size: 18px;
+                /* تصغير حجم الخط */
+            }
+            .Zoverlay p {
+                font-size: 12px;
+                /* تصغير حجم النص */
+            }
+        }
+        /* إضافة مزيد من التعديلات لتناسب الأجهزة اللوحية (أكبر من الهاتف) */
+        
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .Zcard {
+                width: 220px;
+                /* تخصيص عرض الحاويات للأجهزة اللوحية */
+                height: 300px;
+            }
+        }
     </style>
 </head>
 
 <body>
-     <!-- Navbar & Hero Start -->
-     <div class="container-fluid position-sticky p-0" style="z-index: 1000;">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" id="mainNav"
-            style="direction:rtl;;">
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-sticky p-0" style="z-index: 1000;">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" id="mainNav" style="direction:rtl;;">
             <a href="" class="navbar-brand p-0">
-                <h1 class="navbar-brand" style="font-size: 1.9rem;">Estareh</h1>
+                <h1 class="navbar-brand" style="font-size: 1.9rem;">استريح</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -153,29 +151,26 @@
                         </div>
                     </div>
                 </div>
-                <a href="https://estareh.com/service_provider/"
-                    class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">مزود خدمة </a>
+                <a href="https://estareh.com/service_provider/" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">مزود خدمة </a>
         </nav>
-    <!-- Hero Section -->
-    <!-- Hero Section Start -->
-    <div class="hero-container position-relative" style="height: 100vh; overflow: hidden;">
-        <!-- Full-Width Background Image -->
-        <img src="../img/heavyequipments.jpg" alt="Heavy Equipment" 
-             class="img-fluid w-100 h-100 object-fit-cover">
-    
-        <!-- Content Overlay -->
-        <div class="overlay position-absolute top-0 start-0 w-100 h-100" 
-             style="background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));">
-            <div class="content-container h-100 d-flex align-items-center px-5">
-                <div class="text-white">
-                    <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeInLeft text-light" style="line-height: 1.2;">
-                        تأجير معدات ثقيلة موثوقة <br> من شركة استريح
-                    </h1>
-                    <div class="underline mb-3" style="width: 50px; height: 5px; background-color: #0b1a55;"></div>
-                    <p class="lead mb-4 animate__animated animate__fadeInLeft text-light" style="animation-delay: 0.2s;">
-                        يمكنك الوصول إلى أسطول متنوع من الآلات الثقيلة والمركبات لتشغيل مشاريعك. من البناء إلى التشييد، توفر استريح المعدات المناسبة مع خطط إيجار مرنة.
-                    </p>
-                    <!-- <div class="d-flex">
+        <!-- Hero Section -->
+        <!-- Hero Section Start -->
+        <div class="hero-container position-relative" style="height: 100vh; overflow: hidden;">
+            <!-- Full-Width Background Image -->
+            <img src="../img/heavyequipments.jpg" alt="Heavy Equipment" class="img-fluid w-100 h-100 object-fit-cover">
+
+            <!-- Content Overlay -->
+            <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));">
+                <div class="content-container h-100 d-flex align-items-center px-5">
+                    <div class="text-white">
+                        <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeInLeft text-light" style="line-height: 1.2;">
+                            تأجير معدات ثقيلة موثوقة <br> من شركة استريح
+                        </h1>
+                        <div class="underline mb-3" style="width: 50px; height: 5px; background-color: #0b1a55;"></div>
+                        <p class="lead mb-4 animate__animated animate__fadeInLeft text-light" style="animation-delay: 0.2s;">
+                            يمكنك الوصول إلى أسطول متنوع من الآلات الثقيلة والمركبات لتشغيل مشاريعك. من البناء إلى التشييد، توفر استريح المعدات المناسبة مع خطط إيجار مرنة.
+                        </p>
+                        <!-- <div class="d-flex">
                         <a href="#fleet" class="btn btn-warning text-dark fw-bold px-4 py-2 me-3 animate__animated animate__zoomIn">
                             Explore Fleet
                         </a>
@@ -183,180 +178,242 @@
                             Contact Us
                         </a>
                     </div> -->
-                    <a href="#" class="btn btn-primary rounded-pill py-2 px-4 text-light fw-bold px-4 py-2 me-3 animate__animated animate__zoomIn">
+                        <a href="#" class="btn btn-primary rounded-pill py-2 px-4 text-light fw-bold px-4 py-2 me-3 animate__animated animate__zoomIn">
                         كن مزود خدمة
                     </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    
-    <!-- Hero Section End -->
-    
-
-
-    <!-- About Section Start -->
-    <div class="container py-5" style="max-width: 1200px;">
-        <h2 class="text-center mb-4">نبذة عن خدماتنا</h2>
-        <p class="text-center">
-            نحن نقدم مجموعة واسعة من تأجير المعدات الثقيلة للمشاريع الإنشائية والصناعية. تضمن خدمتنا معدات موثوقة وشروط تأجير مرنة ودعمًا على مدار الساعة طوال أيام الأسبوع للحفاظ على سير عملياتك بسلاسة.
-        </p>
-    </div>
-    <!-- نهاية قسم نبذة عن خدماتنا -->
-    
-    <!-- بدء قسم فئات المعدات -->
-    <div id="categories" class="container py-5 animated-cards">
-        <h2 class="text-center mb-5">فئات معداتنا</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="../img/crane.jpg" class="card-img-top" alt="رافعة" height="290">
-                    <div class="card-body">
-                        <h5 class="card-title">الرافعات</h5>
-                        <p class="card-text">مثالية لرفع الأحمال الثقيلة ومشاريع البناء.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="../img/Excavators.jpg" class="card-img-top" alt="حفارة" height="290">
-                    <div class="card-body">
-                        <h5 class="card-title">الحفارات</h5>
-                        <p class="card-text">فعّالة للحفر وتحريك التربة.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="../img/Loaders.png" class="card-img-top" alt="لودر" height="290">
-                    <div class="card-body">
-                        <h5 class="card-title">اللوادر</h5>
-                        <p class="card-text">مثالية لتحميل ونقل المواد.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- نهاية قسم فئات المعدات -->
-    
-    <!-- بدء قسم معرض المركبات -->
-    <div class="container-fluid bg-light py-5 animated-cards">
-        <div class="container">
-            <h2 class="text-center mb-5">اكتشف أسطولنا</h2>
+
+
+
+        <!-- Hero Section End -->
+
+
+
+        <!-- About Section Start -->
+        <div class="container py-5" style="max-width: 1200px;">
+            <h2 class="text-center mb-4">نبذة عن خدماتنا</h2>
+            <p class="text-center">
+                نحن نقدم مجموعة واسعة من تأجير المعدات الثقيلة للمشاريع الإنشائية والصناعية. تضمن خدمتنا معدات موثوقة وشروط تأجير مرنة ودعمًا على مدار الساعة طوال أيام الأسبوع للحفاظ على سير عملياتك بسلاسة.
+            </p>
+        </div>
+        <!-- نهاية قسم نبذة عن خدماتنا -->
+
+        <!-- بدء قسم فئات المعدات -->
+        <div id="categories" class="container py-5 animated-cards">
+            <h2 class="text-center mb-5">فئات معداتنا</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="../img/Bulldozer.jpg" class="card-img-top" alt="بلدوزر" height="290">
+                        <img src="../img/crane.jpg" class="card-img-top" alt="رافعة" height="290">
                         <div class="card-body">
-                            <p class="text-center">بلدوزر - مثالي لدفع كميات كبيرة من المواد.</p>
+                            <h5 class="card-title">الرافعات</h5>
+                            <p class="card-text">مثالية لرفع الأحمال الثقيلة ومشاريع البناء.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="../img/Dump-Truck.jpg" class="card-img-top" alt="شاحنة تفريغ" height="290">
+                        <img src="../img/Excavators.jpg" class="card-img-top" alt="حفارة" height="290">
                         <div class="card-body">
-                            <p class="text-center">شاحنة تفريغ - مثالية لنقل مواد البناء.</p>
+                            <h5 class="card-title">الحفارات</h5>
+                            <p class="card-text">فعّالة للحفر وتحريك التربة.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="../img/Forklift.jpg" class="card-img-top" alt="رافعة شوكية" height="290">
+                        <img src="../img/Loaders.png" class="card-img-top" alt="لودر" height="290">
                         <div class="card-body">
-                            <p class="text-center">رافعة شوكية - رائعة لتحريك المنصات والبضائع الثقيلة بكفاءة.</p>
+                            <h5 class="card-title">اللوادر</h5>
+                            <p class="card-text">مثالية لتحميل ونقل المواد.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="../img/Building Waste.jpg" class="card-img-top" alt="حاويات" height="290">
+                        <div class="card-body">
+                            <h5 class="card-title">الحاويات</h5>
+                            <p class="card-text">تستخدم لجمع مخلفات البناء والتخلص منها بسهولة. </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-  
+        <!-- نهاية قسم فئات المعدات -->
+
+        <div class="container-fluid bg-light py-5 animated-cards">
+            <div class="container">
+                <h2 class="text-center mb-5">اكتشف أسطولنا</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="../img/Bulldozer.jpg" class="card-img-top" alt="بلدوزر" height="290">
+                            <div class="card-body">
+                                <p class="text-center">بلدوزر - مثالي لدفع كميات كبيرة من المواد.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="../img/Dump-Truck.jpg" class="card-img-top" alt="شاحنة تفريغ" height="290">
+                            <div class="card-body">
+                                <p class="text-center">شاحنة تفريغ - مثالية لنقل مواد البناء.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="../img/Forklift.jpg" class="card-img-top" alt="رافعة شوكية" height="290">
+                            <div class="card-body">
+                                <p class="text-center">رافعة شوكية - رائعة لتحريك المنصات والبضائع الثقيلة بكفاءة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        </div>
+    </div>
     </div>
     <!-- Vehicle Gallery Section End -->
 
-    <div class="container py-5 text-center">
-        <h2 class="mb-5">كيف يعمل  تطبيق استريح؟</h2>
-<div class="d-flex flex-wrap" style="justify-content:center;">
-    <!-- خطوة سداسية 1 -->
-    <div class="hexagon" style="background-color: #FFC107;">
-        <div class="hex-content">
-            <h3>1</h3>
-            <p>أضف المواقع</p>
-        </div>
-    </div>
+    <div class="container-fluid bg-light py-5">
+        <h2 class="text-center mb-5">الحاوية المثالية لمشروعك</h2>
+        <div class="Zcontainer">
+            <!-- حاوية 8 ياردة -->
+            <div class="Zcard">
+                <img src="../img/construction waste 8  yard.png" alt="حاوية 8 ياردة">
+                <div class="Zoverlay">
+                    <h3>حاوية 8 ياردة</h3>
+                    <p>مثالية للأعمال المنزلية البسيطة والتجديدات الصغيرة</p>
+                </div>
+            </div>
 
-    <!-- خطوة سداسية 2 -->
-    <div class="hexagon" style="background-color: #E91E63;">
-        <div class="hex-content">
-            <h3>2</h3>
-            <p>حدد مدة الإيجار</p>
-        </div>
-    </div>
+            <!-- حاوية 10 ياردة -->
+            <div class="Zcard">
+                <img src="../img/construction waste 10  yard.png" alt="حاوية 10 ياردة">
+                <div class="Zoverlay">
+                    <h3>حاوية 10 ياردة</h3>
+                    <p>مناسبة لأعمال الترميم المتوسطة وتجديد الغرف المفردة</p>
+                </div>
+            </div>
 
-    <!-- خطوة سداسية 3 -->
-    <div class="hexagon" style="background-color: #3F51B5;">
-        <div class="hex-content">
-            <h3>3</h3>
-            <p>اختر نوع المعدات</p>
-        </div>
-    </div>
+            <!-- حاوية 12 ياردة -->
+            <div class="Zcard">
+                <img src="../img/construction waste 12  yard.png" alt="حاوية 12 ياردة">
+                <div class="Zoverlay">
+                    <h3>حاوية 12 ياردة</h3>
+                    <p>مثالية للمشاريع الصغيرة وأعمال الهدم المحدودة</p>
+                </div>
+            </div>
 
-    <!-- خطوة سداسية 4 -->
-    <div class="hexagon" style="background-color: #03A9F4;">
-        <div class="hex-content">
-            <h3>4</h3>
-            <p>المورد يقدم عرض السعر</p>
-        </div>
-    </div>
+            <!-- حاوية 20 ياردة -->
+            <div class="Zcard">
+                <img src="../img/construction waste 20  yard.png" alt="حاوية 20 ياردة">
+                <div class="Zoverlay">
+                    <h3>حاوية 20 ياردة</h3>
+                    <p>مثالية للمشاريع الإنشائية الكبيرة وأعمال البناء الشاملة</p>
+                </div>
+            </div>
 
-    <!-- خطوة سداسية 5 -->
-    <div class="hexagon" style="background-color: #4CAF50;">
-        <div class="hex-content">
-            <h3>5</h3>
-            <p>أكمل الدفع</p>
-        </div>
-    </div>
-</div>
-
+            <!-- حاوية 30 ياردة -->
+            <div class="Zcard">
+                <img src="../img/construction waste 30  yard.png" alt="حاوية 30 ياردة">
+                <div class="Zoverlay">
+                    <h3>حاوية 30 ياردة</h3>
+                    <p>حاوية صناعية ضخمة للمشاريع الكبرى والهدم الشامل</p>
+                </div>
             </div>
         </div>
+    </div>
+
+
+    <!-- نهاية قسم معرض الحاويات -->
+
+    <div class="container py-5 text-center">
+        <h2 class="mb-5">كيف يعمل تطبيق استريح؟</h2>
+        <div class="d-flex flex-wrap" style="justify-content:center;">
+            <!-- خطوة سداسية 1 -->
+            <div class="hexagon" style="background-color: #FFC107;">
+                <div class="hex-content">
+                    <h3>1</h3>
+                    <p>أضف المواقع</p>
+                </div>
+            </div>
+
+            <!-- خطوة سداسية 2 -->
+            <div class="hexagon" style="background-color: #E91E63;">
+                <div class="hex-content">
+                    <h3>2</h3>
+                    <p>حدد مدة الإيجار</p>
+                </div>
+            </div>
+
+            <!-- خطوة سداسية 3 -->
+            <div class="hexagon" style="background-color: #3F51B5;">
+                <div class="hex-content">
+                    <h3>3</h3>
+                    <p>اختر نوع المعدات</p>
+                </div>
+            </div>
+
+            <!-- خطوة سداسية 4 -->
+            <div class="hexagon" style="background-color: #03A9F4;">
+                <div class="hex-content">
+                    <h3>4</h3>
+                    <p>المورد يقدم عرض السعر</p>
+                </div>
+            </div>
+
+            <!-- خطوة سداسية 5 -->
+            <div class="hexagon" style="background-color: #4CAF50;">
+                <div class="hex-content">
+                    <h3>5</h3>
+                    <p>أكمل الدفع</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
     </div>
 
     <!-- Vendor Benefits Section Start -->
     <div class="container py-5">
-        <h2 class="text-center mb-5">لماذا تتعاون معنا لاستئجار المعدات الثقيلة؟</h2>
-<div class="row">
-    <div class="col-md-6 mb-4">
-        <h4>وصول واسع إلى السوق للمعدات</h4>
-        <p>قم بتوسيع نشاطك التجاري من خلال عرض معداتك الثقيلة للمقاولين والصناعات في جميع أنحاء المنطقة.</p>
-    </div>
-    <div class="col-md-6 mb-4">
-        <h4>زيادة كفاءة استخدام المعدات</h4>
-        <p>قلل وقت التوقف عن العمل عن طريق إدراج معداتك غير المستخدمة واجعلها تعمل بشكل مربح.</p>
-    </div>
-    <div class="col-md-6 mb-4">
-        <h4>إدارة مرنة للإيجارات</h4>
-        <p>قم بإدارة الحجوزات بسهولة باستخدام أدوات التتبع والتقويم في الوقت الفعلي لمنصتنا لتحقيق الجدولة المثالية.</p>
-    </div>
-    <div class="col-md-6 mb-4">
-        <h4>نظام دفع سلس</h4>
-        <p>تلقَ المدفوعات بشكل آمن وفي الوقت المحدد مع طرق دفع متعددة تشمل التحويلات البنكية والمحافظ الرقمية.</p>
-    </div>
-    <div class="col-md-6 mb-4">
-        <h4>تغطية تأمينية شاملة</h4>
-        <p>قدم الإيجارات بثقة مع تغطية تأمينية تحمي معداتك أثناء فترة الإيجار.</p>
-    </div>
-    <div class="col-md-6 mb-4">
-        <h4>دعم مستمر على مدار الساعة</h4>
-        <p>نحن نقدم دعماً مخصصاً لمساعدتك في حل المشكلات بسرعة وضمان سير العمليات بسلاسة.</p>
-    </div>
-</div>
-
+        <h2 class="text-center mb-5">لماذا تتعاون معنا لاستئجار المعدات الثقيلة والحاويات؟</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h4>وصول واسع إلى السوق للمعدات</h4>
+                <p>قم بتوسيع نشاطك التجاري من خلال عرض معداتك الثقيلة للمقاولين والصناعات في جميع أنحاء المنطقة.</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h4>زيادة كفاءة استخدام المعدات</h4>
+                <p>قلل وقت التوقف عن العمل عن طريق إدراج معداتك غير المستخدمة واجعلها تعمل بشكل مربح.</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h4>إدارة مرنة للإيجارات</h4>
+                <p>قم بإدارة الحجوزات بسهولة باستخدام أدوات التتبع والتقويم في الوقت الفعلي لمنصتنا لتحقيق الجدولة المثالية.</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h4>نظام دفع سلس</h4>
+                <p>تلقَ المدفوعات بشكل آمن وفي الوقت المحدد مع طرق دفع متعددة تشمل التحويلات البنكية والمحافظ الرقمية.</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h4>تغطية تأمينية شاملة</h4>
+                <p>قدم الإيجارات بثقة مع تغطية تأمينية تحمي معداتك أثناء فترة الإيجار.</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h4>دعم مستمر على مدار الساعة</h4>
+                <p>نحن نقدم دعماً مخصصاً لمساعدتك في حل المشكلات بسرعة وضمان سير العمليات بسلاسة.</p>
+            </div>
         </div>
+
+    </div>
     </div>
     <!-- Vendor Benefits Section End -->
 
@@ -376,17 +433,16 @@
 
     <!-- Footer Start -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-        <div class="container py-5 border-start-0 border-end-0"
-            style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
+        <div class="container py-5 border-start-0 border-end-0" style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
             <div class="row g-5">
                 <div class="col-md-6 col-lg-6 col-xl-4">
                     <div class="footer-item">
                         <a href="./../index.html" class="p-0">
-                            <h4 class="text-white">
+                            <h1 class="text-white">
                                 <!-- <i class="fas fa-search-dollar me-3"> -->
 
-                            Estareh
-                        </h4>
+                                استريح
+                            </h1>
                         </a>
                         <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center mt-4" style="column-gap: 6px;">
                             <a href="https://apps.apple.com/us/app/estareh/id6499139989?uo=2" class="col-12 col-sm-auto mb-3 mb-sm-0">
@@ -445,7 +501,8 @@
             <div class="row g-4 align-items-center">
                 <div class="text-center ">
                     <span class="text-body"><a href="#" class="text-white text-center"><i
-                                class="fas fa-copyright text-light me-2"></i>2024 Copyright: </a>Estareh.com</span>
+                        class="fas fa-copyright text-light me-2"></i>حقوق الطبع والنشر 2025:
+                </a>لمنصة استريح</span>
                 </div>
 
             </div>

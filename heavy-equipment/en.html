@@ -7,9 +7,7 @@
     <title>Heavy Equipment Rental | Estareh</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
@@ -27,14 +25,106 @@
     <!-- Template Stylesheet -->
     <link href="./../css/style.css" rel="stylesheet">
     <link rel="icon" href="../img/logo.png" type="image/png">
-    
+    <style>
+        .Zcontainer {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 0;
+        }
+        
+        .Zcard {
+            position: relative;
+            width: 250px;
+            height: 350px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+            margin: 10px;
+        }
+        
+        .Zcard img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .Zcard:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .Zcard img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+        
+        .Zoverlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: 0.5s;
+            padding: 15px;
+        }
+        
+        .Zcard:hover .Zoverlay {
+            opacity: 1;
+        }
+        
+        .Zoverlay h3 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .Zoverlay p {
+            color: #ddd;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 767px) {
+            .Zcontainer {
+                padding: 20px 0;
+                gap: 15px;
+            }
+            .Zcard {
+                width: 180px;
+                height: 250px;
+            }
+            .Zoverlay h3 {
+                font-size: 18px;
+            }
+            .Zoverlay p {
+                font-size: 12px;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .Zcard {
+                width: 220px;
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-     <!-- Navbar & Hero Start -->
-     <div class="container-fluid position-sticky p-0" style="z-index: 1000;">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" id="mainNav"
-            style="direction:rtl;;">
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-sticky p-0" style="z-index: 1000;">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" id="mainNav" style="direction:rtl;;">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
@@ -48,35 +138,32 @@
                         </a>
                         <div class="dropdown-menu m-0">
                             <a href="ar.html" class="dropdown-item">عربي</a>
-                          
+
                         </div>
                     </div>
                 </div>
-                <a href="https://estareh.com/service_provider/"
-                    class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Become Our Partner</a>
-                    
-                </div>
+                <a href="https://estareh.com/service_provider/" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">Become Our Partner</a>
+
+            </div>
         </nav>
-    <!-- Hero Section -->
-    <!-- Hero Section Start -->
-    <div class="hero-container position-relative" style="height: 100vh; overflow: hidden;">
-        <!-- Full-Width Background Image -->
-        <img src="../img/heavyequipments.jpg" alt="Heavy Equipment" 
-             class="img-fluid w-100 h-100 object-fit-cover">
-    
-        <!-- Content Overlay -->
-        <div class="overlay position-absolute top-0 start-0 w-100 h-100" 
-             style="background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));">
-            <div class="content-container h-100 d-flex align-items-center px-5">
-                <div class="text-white">
-                    <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeInLeft text-light" style="line-height: 1.2;">
-                        Reliable Heavy Equipment <br> Rentals from Estareh
-                    </h1>
-                    <div class="underline mb-3" style="width: 50px; height: 5px; background-color: #0b1a55;"></div>
-                    <p class="lead mb-4 animate__animated animate__fadeInLeft text-light" style="animation-delay: 0.2s;">
-                        Access a diverse fleet of heavy machinery and vehicles to power your projects. From construction to mining, Estareh provides the right equipment with flexible rental plans.
-                    </p>
-                    <!-- <div class="d-flex">
+        <!-- Hero Section -->
+        <!-- Hero Section Start -->
+        <div class="hero-container position-relative" style="height: 100vh; overflow: hidden;">
+            <!-- Full-Width Background Image -->
+            <img src="../img/heavyequipments.jpg" alt="Heavy Equipment" class="img-fluid w-100 h-100 object-fit-cover">
+
+            <!-- Content Overlay -->
+            <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));">
+                <div class="content-container h-100 d-flex align-items-center px-5">
+                    <div class="text-white">
+                        <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeInLeft text-light" style="line-height: 1.2;">
+                            Reliable Heavy Equipment <br> Rentals from Estareh
+                        </h1>
+                        <div class="underline mb-3" style="width: 50px; height: 5px; background-color: #0b1a55;"></div>
+                        <p class="lead mb-4 animate__animated animate__fadeInLeft text-light" style="animation-delay: 0.2s;">
+                            Access a diverse fleet of heavy machinery and vehicles to power your projects. From construction to mining, Estareh provides the right equipment with flexible rental plans.
+                        </p>
+                        <!-- <div class="d-flex">
                         <a href="#fleet" class="btn btn-warning text-dark fw-bold px-4 py-2 me-3 animate__animated animate__zoomIn">
                             Explore Fleet
                         </a>
@@ -84,300 +171,324 @@
                             Contact Us
                         </a>
                     </div> -->
-                    <a href="#" class="btn btn-primary rounded-pill py-2 px-4 text-light fw-bold px-4 py-2 me-3 animate__animated animate__zoomIn">
+                        <a href="#" class="btn btn-primary rounded-pill py-2 px-4 text-light fw-bold px-4 py-2 me-3 animate__animated animate__zoomIn">
                         Become a Vendor
                     </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-   
-
-    <!-- Hero Section End -->
-    
-
-
-    <!-- About Section Start -->
-    <div class="container py-5" style="max-width: 1200px;">
-        <h2 class="text-center mb-4">About Our Service</h2>
-        <p class="text-center">We offer a wide range of heavy equipment rentals for construction and industrial
-            projects. Our service ensures reliable equipment, flexible rental terms, and 24/7 support to keep your
-            operations running smoothly.</p>
-    </div>
-    <!-- About Section End -->
-
-    <!-- Vehicle Categories Start -->
-    <div id="categories" class="container py-5 animated-cards">
-        <h2 class="text-center mb-5">Our Equipment Categories</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="../img/crane.jpg" class="card-img-top" alt="Crane" height="290">
-                    <div class="card-body">
-                        <h5 class="card-title">Cranes</h5>
-                        <p class="card-text">Ideal for heavy lifting and construction projects.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="../img//Excavators.jpg" class="card-img-top" alt="Excavator" height="290">
-                    <div class="card-body">
-                        <h5 class="card-title">Excavators</h5>
-                        <p class="card-text">Efficient for digging and earth-moving tasks.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="../img/Loaders.png" class="card-img-top" alt="Loader" height="290">
-                    <div class="card-body">
-                        <h5 class="card-title">Loaders</h5>
-                        <p class="card-text">Perfect for loading and transporting materials.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Vehicle Categories End -->
 
-    <!-- Vehicle Gallery Section Start -->
-    <div class="container-fluid bg-light py-5 animated-cards">
-        <div class="container">
-            <h2 class="text-center mb-5">Explore Our Fleet</h2>
+
+
+
+        <!-- Hero Section End -->
+
+
+
+        <!-- About Section Start -->
+        <div class="container py-5" style="max-width: 1200px;">
+            <h2 class="text-center mb-4">About Our Service</h2>
+            <p class="text-center">We offer a wide range of heavy equipment rentals for construction and industrial projects. Our service ensures reliable equipment, flexible rental terms, and 24/7 support to keep your operations running smoothly.</p>
+        </div>
+        <!-- About Section End -->
+
+        <!-- Vehicle Categories Start -->
+        <div id="categories" class="container py-5 animated-cards">
+            <h2 class="text-center mb-5">Our Equipment Categories</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="../img/Bulldozer.jpg" class="card-img-top" alt="Bulldozer" height="290">
+                        <img src="../img/crane.jpg" class="card-img-top" alt="Crane" height="290">
                         <div class="card-body">
-                            <!-- <h5 class="card-title">Cranes</h5>
+                            <h5 class="card-title">Cranes</h5>
+                            <p class="card-text">Ideal for heavy lifting and construction projects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="../img//Excavators.jpg" class="card-img-top" alt="Excavator" height="290">
+                        <div class="card-body">
+                            <h5 class="card-title">Excavators</h5>
+                            <p class="card-text">Efficient for digging and earth-moving tasks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="../img/Loaders.png" class="card-img-top" alt="Loader" height="290">
+                        <div class="card-body">
+                            <h5 class="card-title">Loaders</h5>
+                            <p class="card-text">Perfect for loading and transporting materials.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Vehicle Categories End -->
+
+        <!-- Vehicle Gallery Section Start -->
+        <div class="container-fluid bg-light py-5 animated-cards">
+            <div class="container">
+                <h2 class="text-center mb-5">Explore Our Fleet</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="../img/Bulldozer.jpg" class="card-img-top" alt="Bulldozer" height="290">
+                            <div class="card-body">
+                                <!-- <h5 class="card-title">Cranes</h5>
                         <p class="card-text">Ideal for heavy lifting and construction projects.</p> -->
-                            <p class="text-center">Bulldozer - Perfect for pushing large volumes of materials.</p>
+                                <p class="text-center">Bulldozer - Perfect for pushing large volumes of materials.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="../img/Dump-Truck.jpg" class="card-img-top" alt="Dump Truck" height="290">
-                        <!-- <img src="../img//Excavators.jpg" class="card-img-top" alt="Excavator" height="290"> -->
-                        <div class="card-body">
-                            <!-- <h5 class="card-title">Excavators</h5>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="../img/Dump-Truck.jpg" class="card-img-top" alt="Dump Truck" height="290">
+                            <!-- <img src="../img//Excavators.jpg" class="card-img-top" alt="Excavator" height="290"> -->
+                            <div class="card-body">
+                                <!-- <h5 class="card-title">Excavators</h5>
                         <p class="card-text">Efficient for digging and earth-moving tasks.</p> -->
-                            <p class="text-center">Dump Truck - Ideal for transporting construction materials.</p>
+                                <p class="text-center">Dump Truck - Ideal for transporting construction materials.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="../img/Forklift.jpg" class="card-img-top" alt="Forklift" height="290">
-                        <!-- <img src="../img/Loaders.png" class="card-img-top" alt="Loader" height="290"> -->
-                        <div class="card-body">
-                            <!-- <h5 class="card-title">Loaders</h5>
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img src="../img/Forklift.jpg" class="card-img-top" alt="Forklift" height="290">
+                            <!-- <img src="../img/Loaders.png" class="card-img-top" alt="Loader" height="290"> -->
+                            <div class="card-body">
+                                <!-- <h5 class="card-title">Loaders</h5>
                         <p class="card-text">Perfect for loading and transporting materials.</p> -->
-                            <p class="text-center">Forklift - Great for moving pallets and heavy goods efficiently.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="row">
-            <div class="col-md-4">
-                <img src="../img/Bulldozer.jpg" class="img-fluid mb-4" alt="Bulldozer" height="20">
-                <p class="text-center">Bulldozer - Perfect for pushing large volumes of materials.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="../img/Dump-Truck.jpg" class="img-fluid mb-4" alt="Dump Truck" height="290">
-                <p class="text-center">Dump Truck - Ideal for transporting construction materials.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="../img/Forklift.jpg" class="img-fluid mb-4" alt="Forklift" height="290">
-                <p class="text-center">Forklift - Great for moving pallets and heavy goods efficiently.</p>
-            </div>
-        </div> -->
-        </div>
-    </div>
-    <!-- Vehicle Gallery Section End -->
-
-    <div class="container py-5 text-center">
-        <h2 class="mb-5">How Estareh’s App Flow Works</h2>
-        <div class="d-flex flex-wrap" style="justify-content:center;">
-            <!-- Hexagon Step 1 -->
-            <div class="hexagon" style="background-color: #FFC107;">
-                <div class="hex-content">
-                    <h3>1</h3>
-                    <p>Add Locations</p>
-                </div>
-            </div>
-    
-            <!-- Hexagon Step 2 -->
-            <div class="hexagon" style="background-color: #E91E63;">
-                <div class="hex-content">
-                    <h3>2</h3>
-                    <p>Set Rental Duration</p>
-                </div>
-            </div>
-    
-            <!-- Hexagon Step 3 -->
-            <div class="hexagon" style="background-color: #3F51B5;">
-                <div class="hex-content">
-                    <h3>3</h3>
-                    <p>Select Equipment Type</p>
-                </div>
-            </div>
-    
-            <!-- Hexagon Step 4 -->
-            <div class="hexagon" style="background-color: #03A9F4;">
-                <div class="hex-content">
-                    <h3>4</h3>
-                    <p>Vendor Raises Quotation</p>
-                </div>
-            </div>
-    
-            <!-- Hexagon Step 5 -->
-            <div class="hexagon" style="background-color: #4CAF50;">
-                <div class="hex-content">
-                    <h3>5</h3>
-                    <p>Complete Payment</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Vendor Benefits Section Start -->
-    <div class="container py-5">
-        <h2 class="text-center mb-5">Why Partner with Us for Heavy Equipment Rentals?</h2>
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <h4>Wide Market Reach for Equipment</h4>
-                <p>Expand your business by offering your heavy equipment to contractors and industries across the
-                    region.</p>
-            </div>
-            <div class="col-md-6 mb-4">
-                <h4>Maximize Equipment Utilization</h4>
-                <p>Reduce downtime by listing your idle machinery and keep your equipment running profitably.</p>
-            </div>
-            <div class="col-md-6 mb-4">
-                <h4>Flexible Rental Management</h4>
-                <p>Manage bookings with ease using our platform’s real-time calendar and tracking tools for optimal
-                    scheduling.</p>
-            </div>
-            <div class="col-md-6 mb-4">
-                <h4>Seamless Payment System</h4>
-                <p>Receive payments securely and on time with multiple payment methods, including bank transfers and
-                    digital wallets.</p>
-            </div>
-            <div class="col-md-6 mb-4">
-                <h4>Comprehensive Insurance Coverage</h4>
-                <p>Offer rentals confidently with insurance coverage that protects your equipment during rentals.</p>
-            </div>
-            <div class="col-md-6 mb-4">
-                <h4>24/7 Vendor Support</h4>
-                <p>We provide dedicated support to help you resolve issues promptly and ensure smooth operations.</p>
-            </div>
-        </div>
-    </div>
-    <!-- Vendor Benefits Section End -->
-
-    <!-- Statistics Section Start -->
-
-    <!-- Statistics Section End -->
-
-    <!-- Contact Section Start -->
-    <div class="container-fluid py-5 text-center bg-light">
-        <h2 class="mb-4">Get in Touch</h2>
-        <p>Need help? Contact us for inquiries or rental assistance.</p>
-        <a href="../contact/en.html" class="btn btn-primary rounded-pill py-2 px-4">Contact Us</a>
-    </div>
-    <!-- Contact Section End -->
-
-    <!-- Footer Start -->
-    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-        <div class="container py-5 border-start-0 border-end-0"
-            style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-6 col-xl-4">
-                    <div class="footer-item">
-                        <a href="../index_en.html" class="p-0">
-                            <h4 class="text-white">
-                                Estareh
-                            </h4>
-                        </a>
-                        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center mt-4"
-                            style="column-gap: 6px;">
-                            <a href="https://apps.apple.com/us/app/estareh/id6499139989?uo=2"
-                                class="col-12 col-sm-auto mb-3 mb-sm-0">
-                                <img src="../img/ios.svg" alt="iOS App" class="img-fluid">
-                            </a>
-                            <a href="https://play.google.com/store/apps/details?id=com.app.estareh&pli=1"
-                                class="col-12 col-sm-auto">
-                                <img src="../img/android.svg" alt="Android App" class="img-fluid ms-sm-3">
-                            </a>
+                                <p class="text-center">Forklift - Great for moving pallets and heavy goods efficiently.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="footer-item">
-                        <h4 class="text-white mb-4">Support</h4>
-                        <a href="../privacy/en.html"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                        <a href="../terms/en.html"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+            </div>
+        </div>
 
+        <!-- Vehicle Gallery Section End -->
+
+        <div class="container-fluid bg-light py-5">
+            <h2 class="text-center mb-5">The perfect container for your project</h2>
+            <div class="Zcontainer">
+                <!-- 8-Yard Container -->
+                <div class="Zcard">
+                    <img src="../img/construction waste 8  yard.png" alt="8-Yard Container">
+                    <div class="Zoverlay">
+                        <h3>8-Yard Container</h3>
+                        <p>Ideal for simple household tasks and small renovations</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="footer-item">
-                        <h4 class="text-white mb-4">Contact Info</h4>
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                            <p class="text-white mb-0">Al-Falah Dist</p>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-envelope text-primary me-3"></i>
-                            <p class="text-white mb-0">info@estareh.com</p>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="fa fa-phone-alt text-primary me-3"></i>
-                            <p class="text-white mb-0">0112696240</p>
+
+                <!-- 10-Yard Container -->
+                <div class="Zcard">
+                    <img src="../img/construction waste 10  yard.png" alt="10-Yard Container">
+                    <div class="Zoverlay">
+                        <h3>10-Yard Container</h3>
+                        <p>Suitable for medium-scale restorations and single-room renovations</p>
+                    </div>
+                </div>
+
+                <!-- 12-Yard Container -->
+                <div class="Zcard">
+                    <img src="../img/construction waste 12  yard.png" alt="12-Yard Container">
+                    <div class="Zoverlay">
+                        <h3>12-Yard Container</h3>
+                        <p>Perfect for small projects and limited demolition tasks</p>
+                    </div>
+                </div>
+
+                <!-- 20-Yard Container -->
+                <div class="Zcard">
+                    <img src="../img/construction waste 20  yard.png" alt="20-Yard Container">
+                    <div class="Zoverlay">
+                        <h3>20-Yard Container</h3>
+                        <p>Ideal for large construction projects and comprehensive building works</p>
+                    </div>
+                </div>
+
+                <!-- 30-Yard Container -->
+                <div class="Zcard">
+                    <img src="../img/construction waste 30  yard.png" alt="30-Yard Container">
+                    <div class="Zoverlay">
+                        <h3>30-Yard Container</h3>
+                        <p>A massive industrial container for major projects and complete demolitions</p>
+                    </div>
+                </div>
+
+                <div class="container py-5 text-center">
+                    <h2 class="mb-5">How Estareh’s App Flow Works</h2>
+                    <div class="d-flex flex-wrap" style="justify-content:center;">
+                        <!-- Hexagon Step 1 -->
+                        <div class="hexagon" style="background-color: #FFC107;">
+                            <div class="hex-content">
+                                <h3>1</h3>
+                                <p>Add Locations</p>
+                            </div>
                         </div>
 
-                        <div class="d-flex" style="margin-top: 30px;">
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
+                        <!-- Hexagon Step 2 -->
+                        <div class="hexagon" style="background-color: #E91E63;">
+                            <div class="hex-content">
+                                <h3>2</h3>
+                                <p>Set Rental Duration</p>
+                            </div>
+                        </div>
+
+                        <!-- Hexagon Step 3 -->
+                        <div class="hexagon" style="background-color: #3F51B5;">
+                            <div class="hex-content">
+                                <h3>3</h3>
+                                <p>Select Equipment Type</p>
+                            </div>
+                        </div>
+
+                        <!-- Hexagon Step 4 -->
+                        <div class="hexagon" style="background-color: #03A9F4;">
+                            <div class="hex-content">
+                                <h3>4</h3>
+                                <p>Vendor Raises Quotation</p>
+                            </div>
+                        </div>
+
+                        <!-- Hexagon Step 5 -->
+                        <div class="hexagon" style="background-color: #4CAF50;">
+                            <div class="hex-content">
+                                <h3>5</h3>
+                                <p>Complete Payment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vendor Benefits Section Start -->
+                <div class="container py-5">
+                    <h2 class="text-center mb-5">Why Partner with Us for Heavy Equipment Rentals?</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <h4>Wide Market Reach for Equipment</h4>
+                            <p>Expand your business by offering your heavy equipment to contractors and industries across the region.
+                            </p>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <h4>Maximize Equipment Utilization</h4>
+                            <p>Reduce downtime by listing your idle machinery and keep your equipment running profitably.</p>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <h4>Flexible Rental Management</h4>
+                            <p>Manage bookings with ease using our platform’s real-time calendar and tracking tools for optimal scheduling.
+                            </p>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <h4>Seamless Payment System</h4>
+                            <p>Receive payments securely and on time with multiple payment methods, including bank transfers and digital wallets.</p>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <h4>Comprehensive Insurance Coverage</h4>
+                            <p>Offer rentals confidently with insurance coverage that protects your equipment during rentals.</p>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <h4>24/7 Vendor Support</h4>
+                            <p>We provide dedicated support to help you resolve issues promptly and ensure smooth operations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section Start -->
+                <div class="container-fluid py-5 text-center bg-light">
+                    <h2 class="mb-4">Get in Touch</h2>
+                    <p>Need help? Contact us for inquiries or rental assistance.</p>
+                    <a href="../contact/en.html" class="btn btn-primary rounded-pill py-2 px-4">Contact Us</a>
+                </div>
+                <!-- Contact Section End -->
+
+                <!-- Footer Start -->
+                <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+                    <div class="container py-5 border-start-0 border-end-0" style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
+                        <div class="row g-5">
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="footer-item">
+                                    <a href="../index_en.html" class="p-0">
+                                        <h4 class="text-white">
+                                            Estareh
+                                        </h4>
+                                    </a>
+                                    <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center mt-4" style="column-gap: 6px;">
+                                        <a href="https://apps.apple.com/us/app/estareh/id6499139989?uo=2" class="col-12 col-sm-auto mb-3 mb-sm-0">
+                                            <img src="../img/ios.svg" alt="iOS App" class="img-fluid">
+                                        </a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.app.estareh&pli=1" class="col-12 col-sm-auto">
+                                            <img src="../img/android.svg" alt="Android App" class="img-fluid ms-sm-3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6 col-xl-3">
+                                <div class="footer-item">
+                                    <h4 class="text-white mb-4">Support</h4>
+                                    <a href="../privacy/en.html"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                                    <a href="../terms/en.html"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-3">
+                                <div class="footer-item">
+                                    <h4 class="text-white mb-4">Contact Info</h4>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                                        <p class="text-white mb-0">Al-Falah Dist</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-envelope text-primary me-3"></i>
+                                        <p class="text-white mb-0">info@estareh.com</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fa fa-phone-alt text-primary me-3"></i>
+                                        <p class="text-white mb-0">0112696240</p>
+                                    </div>
+
+                                    <div class="d-flex" style="margin-top: 30px;">
+                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
                                     class="fab fa-facebook-f text-white"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
+                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
                                     class="fab fa-twitter text-white"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
+                                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href="#"><i
                                     class="fab fa-instagram text-white"></i></a>
-                            <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="#"><i
+                                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href="#"><i
                                     class="fab fa-linkedin-in text-white"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="text-center ">
-                    <span class="text-body"><a href="#" class="text-white text-center"><i
-                                class="fas fa-copyright text-light me-2"></i>2024 Copyright: </a>Estareh.com</span>
-                </div>
+                <div class="container-fluid copyright py-4">
+                    <div class="container">
+                        <div class="row g-4 align-items-center">
+                            <div class="text-center ">
+                                <span class="text-body"><a href="#" class="text-white text-center"><i
+                                class="fas fa-copyright text-light me-2"></i>2025 Copyright: </a>Estareh.com</span>
+                            </div>
 
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/wow/wow.min.js"></script>
-    <script src="../lib/easing/easing.min.js"></script>
-    <script src="../lib/waypoints/waypoints.min.js"></script>
-    <script src="../lib/counterup/counterup.min.js"></script>
-    <script src="../lib/lightbox/js/lightbox.min.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="./../js/main.js"></script>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer End -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+                <script src="../lib/wow/wow.min.js"></script>
+                <script src="../lib/easing/easing.min.js"></script>
+                <script src="../lib/waypoints/waypoints.min.js"></script>
+                <script src="../lib/counterup/counterup.min.js"></script>
+                <script src="../lib/lightbox/js/lightbox.min.js"></script>
+                <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+                <script src="./../js/main.js"></script>
 </body>
 
 </html>
