@@ -11,9 +11,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
@@ -32,18 +30,17 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="icon" href="./img/logo.png" type="image/png">
     <style>
-        
-        #discover:hover{
+        #discover:hover {
             background-color: white;
-           
         }
+        
         .navbar-light .navbar-brand {
             color: white;
             /* Default color */
             transition: color 0.3s ease-in-out;
             /* Smooth transition for color change */
         }
-
+        
         @media only screen and (max-width: 991px) {
             .navbar-light .navbar-brand {
                 color: #0b1a55;
@@ -52,18 +49,18 @@
                 /* Smooth transition for color change */
             }
         }
-
+        
         .navbar-scrolled .navbar-brand {
             color: #0b1a55;
             /* Color upon scrolling */
         }
-
+        
         h3 {
             position: relative;
             display: inline-block;
             font-size: 2rem;
         }
-
+        
         .animated-text {
             display: inline-block;
             position: relative;
@@ -72,17 +69,15 @@
             /* Start outside the viewport */
             animation: slideIn 2s ease-in-out forwards;
         }
-
+        
         @keyframes slideIn {
             0% {
                 opacity: 0;
                 transform: translateX(100%);
             }
-
             50% {
                 opacity: 1;
             }
-
             100% {
                 opacity: 1;
                 transform: translateX(0);
@@ -99,18 +94,16 @@
 <body>
 
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
- 
+
 
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-sticky p-0" style="z-index: 1000;">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" id="mainNav"
-            style="direction:rtl;;">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" id="mainNav" style="direction:rtl;;">
             <a href="" class="navbar-brand p-0">
                 <h1 class="navbar-brand" style="font-size: 1.9rem;">استريح</h1>
             </a>
@@ -130,105 +123,54 @@
                         </a>
                         <div class="dropdown-menu m-2">
                             <a href="index_en.html" class="dropdown-item">English</a>
-                       
+
                         </div>
                     </div>
                 </div>
-                <a href="https://estareh.com/service_provider/"
-                    class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">انضم كمزود خدمة</a>
+                <a href="https://estareh.com/service_provider/" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0 flex-shrink-0">انضم كمزود خدمة</a>
             </div>
         </nav>
 
         <div class="header-carousel owl-carousel">
             <div class="header-carousel-item">
-                <img src="img/Delivery.jpg" class="img-fluid w-100" alt="Image">
+                <img src="img/Building Waste.jpg" class="img-fluid w-100" alt="Image">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row gy-0 gx-5">
                             <div class="col-lg-0 "></div>
                             <div class="col-xl-7">
                                 <div class="text-sm-center text-md-start">
-                                    <h3 class="text-primary text-uppercase fw-bold mb-4"
-                                        style="position: relative; overflow: hidden;">
+                                    <h3 class="text-primary text-uppercase fw-bold mb-4" style="position: relative; overflow: hidden;">
                                         <span class="animated-text">استريح</span>
                                     </h3>
-                                    <h1 class="display-4 text-uppercase text-white mb-4">خدمات توصيل وتأجير معدات بدون
-                                        عناء</h1>
-                                    <p class="mb-5 fs-5">
-                                        نربطك بخدمات التوصيل الموثوقة وتأجير المعدات الثقيلة. استمتع براحة الحلول
-                                        اللوجستية الحديثة المصممة لتلبية احتياجاتك الشخصية والمهنية.
-                                    </p>
-                                    
-                                 
+                                    <h1 class="display-4 text-uppercase text-white mb-4">خدمة تأجير الحاويات</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="header-carousel-item" >
-                <img src="img/service-img.jpg" class="img-fluid w-100" alt="Image">
-                <div class="carousel-caption">
-                    <div class="container">
-                        <div class="row g-5">
-                            <div class="col-12 animated fadeInUp">
-                                <div class="text-center">
-                                    <h3 class="text-primary text-uppercase fw-bold mb-4"
-                                        style="position: relative; overflow: hidden;">
-                                        <span class="animated-text">اكتشف استريح</span>
-                                    </h3>
-                                    </h4>
-                                    <h1 class="display-4 text-uppercase text-white mb-4">شريكك في اللوجستيات الفعّالة
-                                    </h1>
-                                    <p class="mb-5 fs-5">
-                                        اغمر نفسك في عالم الحلول اللوجستية الفعالة والموثوقة مع استريح. سواء كانت مهمتك
-                                        إدارة تأجير المعدات الثقيلة أو ضمان التسليم في الوقت المحدد، نغطي جميع احتياجاتك
-                                        ببضع خطوات بسيطة.
-                                    </p>
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-carousel-item" >
+            <div class="header-carousel-item">
                 <img src="img/H.jpg" class="img-fluid w-100" alt="Image">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row g-5">
                             <div class="col-12 animated fadeInUp">
                                 <div class="text-center">
-                                    <h3 class="text-primary text-uppercase fw-bold mb-4"
-                                        style="position: relative; overflow: hidden;">
-                                        <span class="animated-text"> استريح</span>
+                                    <h3 class="text-primary text-uppercase fw-bold mb-4" style="position: relative; overflow: hidden;">
+                                        <span class="animated-text">اكتشف استريح</span>
                                     </h3>
                                     </h4>
-                                    <h1 class="display-4 text-uppercase text-white mb-4">شريكك في تاجير المعاد الثقيلة 
+                                    <h1 class="display-4 text-uppercase text-white mb-4">شريكك في تاجير المعدات الثقيلة
                                     </h1>
-                                   
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="header-carousel-item" >
-                <img src="img/logo.png" class="img-fluid w-100" alt="Image">
-                <div class="carousel-caption">
-                    <div class="container">
-                        <div class="row g-5">
-                            <div class="col-12 animated fadeInUp">
-                                <div class="text-center">
-                                    <h3 class="text-primary text-uppercase fw-bold mb-4"
-                                        style="position: relative; overflow: hidden;">
-                                        <span class="animated-text"> استريح</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
     <!-- Navbar & Hero End -->
@@ -240,17 +182,15 @@
                     <div>
                         <!-- <h4 class="text-primary">About Us</h4> -->
                         <h1 class="display-5 mb-4" style="color: #0b1a55;">تعرف على استريح: شريكك في اللوجستيات الفعّالة</h1>
-                        <p class="mb-4">في استريح، نحن ملتزمون بثورة إدارة اللوجستيات من خلال حلول متطورة للتوصيل وتأجير
-                            المعدات الثقيلة. منصتنا تضمن تكامل الخدمات بسلاسة، مما يعزز قدراتك التشغيلية بالموثوقية
-                            والدقة.
+                        <p class="mb-4">في استريح، نحن ملتزمون بثورة إدارة اللوجستيات من خلال حلول متطورة للتوصيل وتأجير المعدات الثقيلة. منصتنا تضمن تكامل الخدمات بسلاسة، مما يعزز قدراتك التشغيلية بالموثوقية والدقة.
                         </p>
                         <div class="row g-4">
                             <div class="col-md-6 col-lg-6 col-xl-6">
                                 <div class="d-flex">
                                     <!-- <div><i class="fas fa-lightbulb fa-3x text-primary"></i></div> -->
                                     <div class="">
-                                        <h4 style="color: #0b1a55;">خدمات توصيل موثوقة</h4>
-                                        <p>تمتع بتجربة توصيل سريعة وآمنة مصممة لتلبية احتياجاتك سواء الشخصية أو المهنية.
+                                        <h4 style="color: #0b1a55;">تاجير الحاويات </h4>
+                                        <p>توفير حاويات بأحجام مختلفة لاستخدامها في جمع المخلفات أو التخزين أو النقل. تستخدم عادةً في مواقع البناء، المشاريع الصناعية، والأعمال التجارية
                                         </p>
                                     </div>
                                 </div>
@@ -260,14 +200,12 @@
                                     <!-- <div><i class="bi bi-bookmark-heart-fill fa-3x text-primary"></i></div> -->
                                     <div class="">
                                         <h4 style="color: #0b1a55;">تأجير المعدات الثقيلة</h4>
-                                        <p>وصول إلى مجموعة واسعة من المعدات عالية الجودة لمشاريع البناء أو الصناعية دون
-                                            أي متاعب.</p>
+                                        <p>وصول إلى مجموعة واسعة من المعدات عالية الجودة لمشاريع البناء أو الصناعية دون أي متاعب.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <a href="https://estareh.com/service_provider/"
-                                    class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">انضم لنا</a>
+                                <a href="https://estareh.com/service_provider/" class="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">انضم لنا</a>
                             </div>
 
                         </div>
@@ -277,7 +215,7 @@
                     <div class="bg-primary rounded position-relative overflow-hidden">
                         <img src="img/about-estareh1.png" class="img-fluid rounded w-100" alt="">
 
-                       
+
                     </div>
                 </div>
             </div>
@@ -286,52 +224,49 @@
 
     <div id="services" class="container-fluid service pb-5" style="direction: rtl;">
         <div class="container pb-5">
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                <!-- <h4 class="text-primary">Our Services</h4> -->
-                <h1 class="display-5 mb-4" style="color: #0b1a55;">حلول اللوجستيات والمعدات المصممة</h1>
-                <p class="mb-0" style="color: #0b1a55;">
-                    في استريح، نلتزم بتقديم خدمات لوجستية فعالة وموثوقة، تشمل توصيل دقيق وخيارات واسعة لتأجير المعدات
-                    الثقيلة، مصممة لتبسيط عملياتك وتعزيز إنتاجيتك.
-                </p>
-            </div>
-            <div class="row g-4">
-                
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/H.jpg"                                 class="img-fluid rounded-top w-100" alt="Image">
-                        </div>
-                        <div class="rounded-bottom p-4" style="color: #0b1a55;">
-                            <a  href="./heavy-equipment/ar.html" class="h4 d-inline-block mb-4" style="color: #0b1a55;">تأجير المعدات الثقيلة</a>
-                            <p class="mb-4">
-                                احصل على تشكيلة متنوعة من المعدات الثقيلة للأعمال الإنشائية والاستخدام الصناعي. توفر
-                                تأجيراتنا شروطًا مرنة ومعدات موثوقة، جاهزة عند الحاجة.
-                            </p>
-                            <a
-                            id="discover"
-                            href="./heavy-equipment/ar.html"
-                            class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#">تعرف أكثر</a>
-                        </div>
+            <!-- إضافة flexbox لتحقيق التوزيع -->
+            <div class="row d-flex align-items-center">
+                <!-- الصورة في الجهة اليسرى -->
+                <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="bg-primary rounded position-relative overflow-hidden">
+                        <img src="img/estareh.jpg" class="img-fluid rounded w-100" alt="">
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="img/HA.jpg"                                 class="img-fluid rounded-top w-100" alt="Image">
-                        </div>
-                        <div class="rounded-bottom p-4" style="color: #0b1a55;">
-                            <a  href="./heavy-equipment/ar.html" class="h4 d-inline-block mb-4" style="color: #0b1a55;">تأجير الحاويات </a>
-                            <p class="mb-4">توفير حاويات بأحجام مختلفة لاستخدامها في جمع المخلفات أو التخزين أو النقل. تستخدم عادةً في مواقع البناء، المشاريع الصناعية، والأعمال التجارية</p><a
-                           </a>
-                        </div>
-                    </div>
+
+                <!-- النص في الجهة اليمنى -->
+                <div class="col-md-6 text-right pb-5 wow fadeInUp" data-wow-delay="0.2s">
+                    <h1 class="display-5 mb-4" style="color: #0b1a55;">حلول اللوجستيات والمعدات المصممة</h1>
+                    <p class="mb-0" style="color: #0b1a55;">
+                        في استريح، نلتزم بتقديم خدمات لوجستية فعالة وموثوقة، تشمل توصيل دقيق وخيارات واسعة لتأجير المعدات الثقيلة، مصممة لتبسيط عملياتك وتعزيز إنتاجيتك.
+                    </p>
                 </div>
-            
             </div>
         </div>
     </div>
-
-
+    <div class="row align-items-center">
+        <!-- تعديل الصورة -->
+        <div class="col-md-6 d-flex justify-content-end">
+            <img src="img/H.jpg" class="img-fluid rounded" alt="Image" style="margin-left: 50%; width: 90%; height: auto;">
+            <!-- تعديل الحجم عبر CSS -->
+        </div>
+        <div class="col-md-6">
+            <div class="service-item">
+                <div class="rounded-bottom p-4" style="color: #0b1a55;">
+                    <a href="./heavy-equipment/ar.html" class="h4 d-inline-block mb-4" style="color: #0b1a55; font-size: 28px; font-weight: bold;">
+                        تأجير المعدات الثقيلة والحاويات
+                    </a>
+                    <p class="mb-4" style="font-size: 20px;">
+                        احصل على تشكيلة متنوعة من المعدات الثقيلة للأعمال الإنشائية والاستخدام الصناعي. توفر تأجيراتنا شروطًا مرنة ومعدات موثوقة، جاهزة عند الحاجة.
+                    </p>
+                    <a id="discover" href="./heavy-equipment/ar.html" class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" style="font-size: 18px;">تعرف أكثر</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 40px;"></div>
+    <div style="height: 40px;"></div>
+    </div>
+    </div>
     <!-- Features Start -->
     <div id="features" class="container-fluid feature pb-5" style="direction: rtl;">
         <div class="container pb-5">
@@ -339,10 +274,10 @@
                 <!-- <h4 class="text-primary">Our Features</h4> -->
                 <h1 class="display-5 mb-4" style="color: #0b1a55;">تعزيز الكفاءة في خدمات اللوجستيات والمعدات</h1>
                 <p class="mb-0">
-                    اكتشف الميزات الأساسية التي تجعل من استريح رائدة في تقديم حلول لوجستية مصممة وفعّالة. من التكنولوجيا
-                    المتطورة إلى الخدمات المركزة على العميل، اكتشف كيف نعزز كل جانب من جوانب احتياجاتك التشغيلية.
+                    اكتشف الميزات الأساسية التي تجعل من استريح رائدة في تقديم حلول لوجستية مصممة وفعّالة. من التكنولوجيا المتطورة إلى الخدمات المركزة على العميل، اكتشف كيف نعزز كل جانب من جوانب احتياجاتك التشغيلية.
                 </p>
             </div>
+
             <div class="row g-4">
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="feature-item p-4">
@@ -351,12 +286,8 @@
                         </div>
                         <h4 style="color: #0b1a55;">تتبع فوري</h4>
                         <p class="mb-4">
-                            احصل على رؤى فورية من خلال أنظمتنا المتقدمة للتتبع التي تضمن الشفافية والتحديثات الزمنية
-                            طوال عملية التوصيل. </p>
-                            <a
-                            id="discover"
-                            href="#"
-                            class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#">تعرف أكثر</a>
+                            احصل على رؤى فورية من خلال أنظمتنا المتقدمة للتتبع التي تضمن الشفافية والتحديثات الزمنية طوال عملية التوصيل. </p>
+                        <a id="discover" href="#" class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="#">تعرف أكثر</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
@@ -366,8 +297,7 @@
                         </div>
                         <h4 style="color: #0b1a55;">موثوقية المعدات</h4>
                         <p class="mb-4">
-                            توفر إمكانية الوصول إلى مجموعة واسعة من المعدات عالية الجودة والمحافظ عليها جيدًا جاهزة
-                            لتلبية متطلبات أي حجم وتعقيد للمشروع </p>
+                            توفر إمكانية الوصول إلى مجموعة واسعة من المعدات عالية الجودة والمحافظ عليها جيدًا جاهزة لتلبية متطلبات أي حجم وتعقيد للمشروع </p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
@@ -388,8 +318,7 @@
                         </div>
                         <h4 style="color: #0b1a55;">رضا العملاء</h4>
                         <p class="mb-4">
-                            التزامنا بالتميز يعني أننا مكرسون لتقديم خدمات تلبي توقعاتك ليس فقط، بل تتجاوزها من حيث
-                            الجودة والموثوقية </p>
+                            التزامنا بالتميز يعني أننا مكرسون لتقديم خدمات تلبي توقعاتك ليس فقط، بل تتجاوزها من حيث الجودة والموثوقية </p>
                     </div>
                 </div>
             </div>
@@ -402,21 +331,24 @@
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px; color: #0b1a55;">
                 <!-- <h4 class="text-primary">عروضنا</h4> -->
                 <h1 class="display-5 mb-4" style="color: #0b1a55;">خدمات مخصصة لكل احتياج</h1>
-                <p class="mb-0">استريح تُمكّنك من اختيار الخدمات والمركبات الأكثر ملاءمة لاحتياجاتك. مع خيارات تتراوح من
-                    أنواع مختلفة من التعامل مع البضائع إلى خيارات تنافسية </p>
+                <p class="mb-0">استريح تُمكّنك من اختيار الخدمات والمركبات الأكثر ملاءمة لاحتياجاتك. مع خيارات تتراوح من أنواع مختلفة من التعامل مع البضائع إلى خيارات تنافسية </p>
             </div>
             <div class="row g-5 align-items-center" style="color: #0b1a55;">
                 <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.2s" style="color: #0b1a55;">
-                    <div class="nav nav-pills bg-light rounded p-5"> <a class="accordion-link p-4 active mb-4"
-                            data-bs-toggle="pill" href="#collapseOne">
+                    <div class="nav nav-pills bg-light rounded p-5">
+                        <a class="accordion-link p-4 active mb-4" data-bs-toggle="pill" href="#collapseOne">
                             <h5 class="mb-0">اختيار المركبات بكفاءة</h5>
-                        </a> <a class="accordion-link p-4 mb-4" data-bs-toggle="pill" href="#collapseTwo">
+                        </a>
+                        <a class="accordion-link p-4 mb-4" data-bs-toggle="pill" href="#collapseTwo">
                             <h5 class="mb-0">التعامل المرن مع البضائع</h5>
-                        </a> <a class="accordion-link p-4 mb-4" data-bs-toggle="pill" href="#collapseThree">
+                        </a>
+                        <a class="accordion-link p-4 mb-4" data-bs-toggle="pill" href="#collapseThree">
                             <h5 class="mb-0">طرق دفع متعددة</h5>
-                        </a> <a class="accordion-link p-4 mb-0" data-bs-toggle="pill" href="#collapseFour">
+                        </a>
+                        <a class="accordion-link p-4 mb-0" data-bs-toggle="pill" href="#collapseFour">
                             <h5 class="mb-0">إدارة الطلبات بانسيابية</h5>
-                        </a> </div>
+                        </a>
+                    </div>
                 </div>
                 <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.4s">
                     <div class="tab-content">
@@ -426,8 +358,7 @@
                                         alt=""> </div> -->
                                 <div class="">
                                     <h1 class="display-5 mb-4" style="color: #0b1a55;">اختر المركبة المناسبة لاحتياجاتك</h1>
-                                    <p class="mb-4">اختر من مجموعة واسعة من المركبات المصممة لتلبية متطلبات الخدمات
-                                        المختلفة، مما يضمن الكفاءة والموثوقية في عملياتك. </p>
+                                    <p class="mb-4">اختر من مجموعة واسعة من المركبات المصممة لتلبية متطلبات الخدمات المختلفة، مما يضمن الكفاءة والموثوقية في عملياتك. </p>
                                     <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">تعرف على المزيد</a> -->
                                 </div>
                             </div>
@@ -438,8 +369,7 @@
                                         alt=""> </div> -->
                                 <div class="">
                                     <h1 class="display-5 mb-4" style="color: #0b1a55;">خدمات قابلة للتكيف مع أنواع البضائع المتنوعة</h1>
-                                    <p class="mb-4">سواء كانت البضائع حساسة أو معدات ثقيلة، خدماتنا تتكيف للتعامل مع
-                                        جميع أنواع البضائع بأقصى درجات العناية والاحترافية. </p>
+                                    <p class="mb-4">سواء كانت البضائع حساسة أو معدات ثقيلة، خدماتنا تتكيف للتعامل مع جميع أنواع البضائع بأقصى درجات العناية والاحترافية. </p>
                                     <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">تعرف على المزيد</a> -->
                                 </div>
                             </div>
@@ -450,8 +380,7 @@
                                         alt=""> </div> -->
                                 <div class="">
                                     <h1 class="display-5 mb-4" style="color: #0b1a55;">خيارات دفع مريحة وآمنة</h1>
-                                    <p class="mb-4">استخدم مجموعة متنوعة من طرق الدفع التي تناسب راحتك، من المدفوعات
-                                        الرقمية إلى الأساليب التقليدية، مما يضمن عمليات سلسة وآمنة. </p>
+                                    <p class="mb-4">استخدم مجموعة متنوعة من طرق الدفع التي تناسب راحتك، من المدفوعات الرقمية إلى الأساليب التقليدية، مما يضمن عمليات سلسة وآمنة. </p>
                                     <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">تعرف على المزيد</a> -->
                                 </div>
                             </div>
@@ -462,8 +391,7 @@
                                         alt=""> </div> -->
                                 <div class="">
                                     <h1 class="display-5 mb-4" style="color: #0b1a55;">عملية معالجة الطلبات بانسيابية</h1>
-                                    <p class="mb-4">اختبر إدارة طلبات انسيابية تعزز من كفاءة العمليات الخاصة بك وتقلل من
-                                        الوقت المستغرق في الإعدادات الروتينية. </p>
+                                    <p class="mb-4">اختبر إدارة طلبات انسيابية تعزز من كفاءة العمليات الخاصة بك وتقلل من الوقت المستغرق في الإعدادات الروتينية. </p>
                                     <!-- <a class="btn btn-primary rounded-pill py-2 px-4" href="#">تعرف على المزيد</a> -->
                                 </div>
                             </div>
@@ -500,8 +428,8 @@
                         <!-- <p class="card-text">انضم إلى شبكة توسع نطاقك وتملأ جدولك. يوفر استريح أدوات تعمل على تبسيط عملياتك، وتقليل وقت التعطل، وزيادة ربحيتك. استفد من التحليلات المتقدمة وحلول الدفع التي تبسط عملياتك التجارية.</p> -->
                     </div>
                     <div class="mb-4 choose-us-element">
-                        <p class="card-title p-2 ms-3" style=" color: #0b1a55; font-size: 1.7rem;">تحسين الكفاءة
-                            الإدارية</p>
+                        <p class="card-title p-2 ms-3" style=" color: #0b1a55; font-size: 1.7rem;">تحسين الكفاءة الإدارية
+                        </p>
                         <!-- <p class="card-text">انضم إلى شبكة توسع نطاقك وتملأ جدولك. يوفر استريح أدوات تعمل على تبسيط عملياتك، وتقليل وقت التعطل، وزيادة ربحيتك. استفد من التحليلات المتقدمة وحلول الدفع التي تبسط عملياتك التجارية.</p> -->
                     </div>
                     <div class="mb-4 choose-us-element">
@@ -517,8 +445,7 @@
 
     <!-- Footer Start -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s" style="direction: rtl;">
-        <div class="container py-5 border-start-0 border-end-0"
-            style="border: 1px solid; border-color: rgba(255, 255, 255, 0.08);">
+        <div class="container py-5 border-start-0 border-end-0" style="border: 1px solid; border-color: rgba(255, 255, 255, 0.08);">
             <div class="row g-5">
                 <div class="col-md-6 col-lg-6 col-xl-4">
                     <div class="footer-item">
@@ -620,7 +547,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function() {
             const navbar = document.getElementById('mainNav');
             if (window.scrollY > 50) { // Adjust this value based on when you want the color to change
                 navbar.classList.add('navbar-scrolled');
@@ -630,4 +557,5 @@
         });
     </script>
 </body>
+
 </html>
